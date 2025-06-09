@@ -1,0 +1,25 @@
+Local Zones, Wavelength Zones and Edge Locations
+
+Important for low latency
+
+Local Zones:
+    - If we stick to Availability Zones, there will be latency in other parts of the world.
+    For example: The Region is in Mumbai. What about people in Gurgaon?
+    - This will create a lot of latency
+    - So AWS started coming up with local zones(small data centers) with limited services like EC2, VPC, RDS, ECS, EKS etc
+    - Created one in Delhi and one in Kolkata
+    - 2 are coming soon. One in Chennai and one in Bangalore
+
+
+Wavelength Zones:
+    - AWS Wavelength enables developers to build applications that deliver ultra-low latencies to mobile devices and end users.
+    - So a delay of 90-180 milliseconds is a lot for time critical application like Autonomous driving cars, medical image screening etc.
+    - So what AWS started doing is deploying their infra on data center of communication service provider like Airtel, Vodafone etc
+
+    So the previous flow: client -> mobile tower -> CSP(communication service provider)-> AWS region. This takes 90-180 milliseconds
+    - On the other hand, with wavelength zones, the flow is: client -> mobile tower -> CSP. This takes very less time compared to sending it to regions.
+
+Edge Location: 
+    - They are the caching sites. Used for faster retreival.
+    - They are not very updated, but very low latency.
+    - CloudFront is a service that uses these edge locations to store data in cache.

@@ -1,0 +1,28 @@
+AWS Well Architected Framework
+
+6 pillars in Well Architected Framework. 
+
+Acronym to remember them:
+- C -> Cost optimised
+    - Analyse expenditure
+    - Use cost-effective resources
+    - Do not guess
+- R -> Reliability (Recover from failure)
+    - Recover from failure/disaster
+    - Test your recovery procedures
+- O -> Operational excellence (try and remove human errors)
+    - Perform operations with code
+- P -> Performance
+    - Reduce latency
+    - Use serverless architecture
+    - Monitor resources and applications
+- S -> Security 
+    - Follow the principle of least privilage
+    - Use MFA
+- S -> Sustainability
+    - Less impact on environment
+    - Maximise the utilisation
+
+How can we build our cloud infrastructure according to best practice?
+    - AWS Well Architected Framework helps cloud architects build secure, high-performing, resillient and efficient application infrastructures.
+    - It is a consistent approach for customers and partners to evaluate architectures and implement designs that can scale over time.

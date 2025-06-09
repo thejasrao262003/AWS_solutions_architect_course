@@ -1,0 +1,26 @@
+AWS Global Infrastructure
+
+What is Cloud computing?
+- Access services on demand
+- Avoid large upfront investments
+- Provision computing resources as needed
+- Pay only for what you use
+
+AWS data centers, Regions and Availability Zones
+
+- AWS Regions:
+    - Till today AWS is in 33 regions.
+    - 4 in US, 2 in India, 2 in Australia etc
+
+- AWS Data Centers:
+    - AWS services operate within AWS data centers.
+    - Data centers host thousands of AWS services and servers.
+    - All data centers uses AWS backbone network equipment
+    - Data centers are organized into Availability Zones.
+
+Regions - 33
+Let's consider Australia - Sydney
+In Sydney there are Availability Zones - AZ1, AZ2, AZ3
+Inside each Availability Zone, there are multiple data centers. They are organized in Availability Zones
+Refer to image: availability_zones.png and us-east-1.png
+
