@@ -1,0 +1,10 @@
+AWS Identity and Access Management
+
+Permission Boundary:
+    - A permissions boundary in AWS IAM is an advanced feature that sets the maximum permissions an IAM user or role can have, regardless of what their IAM policy allows.
+    Example: Suppose
+        - A user has an IAM policy that allows s3:* (all S3 actions)
+        - But a permissions boundary allows only s3:GetObject
+        - Result: The user can only perform s3:GetObject, even though the IAM policy allows more.
+
+Note: This can only restrict IAM users, can't give permissions.

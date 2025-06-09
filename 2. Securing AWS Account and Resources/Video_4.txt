@@ -1,0 +1,21 @@
+AWS Organization and Service Control Policy
+
+AWS Organization:
+    - A company/organization has a single AWS account. This is shared by various teams like dev, testing, security etc
+    - Now when the bill arrives, it is very hard to find which team spent how much
+    - If company starts taking multiple accounts for different teams, it is very hard to Management.
+    Example: Each bill might be generated on different dates, or if you have 10 accounts, then 10 different bills
+    - If the company wants to apply a policy that no account will be able to create a server above T2 micro. Now they need to set this condition in each and every account.
+
+    - So AWS Organization manages multiple account centrally. We get consolidated billing
+    - It allows to apply policies centrally
+
+    - So the main account becomes root/management account
+    - Under root account, you have multiple organisational units.
+    - Under OU you have either sub OU or accounts.
+
+Service Control Policy:
+    - When you apply policy on AWS Organization, it's called SCP.
+    - The policies set on root account, will be propogated to each account in every OU and sub OU
+    Example: If root account decides, you cannot create an EC2 instance bigger than T2 micro, then the children accounts can't create better servers.
+    SCP again acts as a filter not as a granter
