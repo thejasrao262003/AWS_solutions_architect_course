@@ -1,0 +1,48 @@
+AWS Identity and Access Management
+
+- Identity and Resource based policy
+
+- Identity based policy: Ploicy attached to user, user group and role
+- Resource based policy: The policy which is assigned to a resource. 
+
+Example: Identity based policy can be like read only access to EC2, full access to S3 etc.
+    - Resource based policy can be 
+
+Format of Identity based policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow"/"Deny",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeImages"
+                ],
+            "Resource": "arn" -> unique id of the service I am using / *(for every service),
+            "Condition": {
+                "condition":{
+                    "key": "value"
+                }
+            }
+        }
+    ]
+}
+
+Format of Resource Based policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "This is Geeks Policy" (comments),
+            "Effect": "Allow",
+            "Principal": "*" (Who can access this resource)/ account_id / or IAM user's ARN,
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws..."
+        }
+    ]
+}
+
+Refer to image AWS_policy_evaluation.png for order of AWS policy evaluation.

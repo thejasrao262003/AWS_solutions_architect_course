@@ -1,0 +1,27 @@
+Securing AWS Accounts and Resources
+
+1. AWS Identity and Access Management (IAM)
+
+- This file focuses on Root Account, User, Groups and Roles
+
+AWS Root account: AWS account owner
+IAM user: Different users under root account
+Example: Root user is company account, the employees will have IAM Accounts
+
+- IAM users are users who can access an AWS account.
+    - Each IAM user has his own AWS credentials (user id or access key id)
+    - Each users are authorised to perform specific AWS actions based on permissions assigned to them.
+
+- IAM Groups
+    - In case multiple user fall under same permission, it is recommended to create IAM group
+    - Assign IAM users to an IAM user group.
+    - Attach policies to an IAM user group instead of an IAM user so that it apply to all users within the group.
+
+- AWS IAM Roles
+    - An IAM role is an IAM Identity that you can create in your account that has specific permissions.
+    - An IAM role is similar to an IAM user, in that it is an AWS Identity with permission policies that determine what Identitycan and cannot do in AWS
+    - However instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it.
+    - It doesn't have long term creds. When you assume a role, it provides you with temporary Security creds.
+    Example: If a member from development team wants to work on testing a feature he built, instead of giving him all the permissions, I can assign testing role to him.
+        - This will give him temporary access to testing resources.
+        
