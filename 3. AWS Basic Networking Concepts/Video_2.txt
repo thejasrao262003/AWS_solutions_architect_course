@@ -1,0 +1,22 @@
+Virtual Private Cloud(Subnet, Internet Gateway and Route Table)
+
+VPC:
+    - With Amazon VPC, you can launch AWS resources in a logically isolated virtual network that you've defined.
+    - This virtual network closely resembles a traditional network that you'd operate in your own data center, with the benefits of using scalable infrastructure of AWS
+
+    First we create VPC, then we create resources
+    Analogy: We first buy a land and then build a house on that piece of land.
+    - Even in home, you would want one room to be personal room, the other one can be guest room
+    - When we create a room in VPC, it is called subnet.
+    - Personal room is Private subnet, and Guest room is public subnet
+
+Internet Gateway:
+    - The internet gateway will be attached to VPC and inform public subnet, that you can go via internet gateway.
+    - Attach the route table to subnet
+Route table:
+    - Refer to route_table.png image.
+    The route table for public VPC will have two entries. One is normal target and Destination
+    - The other is Internet Gateway to 0.0.0.0/0
+     The route table for private VPC will have only one entry. That is target to destination.
+
+    

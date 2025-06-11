@@ -1,0 +1,22 @@
+IP Addressing and Classless Interdomain Routing(CIDR)
+
+192.168.0.0/16 -> What is this?
+How many IP address can we create?
+
+192.168.0.0 -> 32 bits
+
+So 192.168.0.0/24 -> This means 24 bits are blocked. So 2^8 -> 256 IPs can be created
+
+In this 2 IPs are blocked. So 2^(32-n) - 2
+i) First one is reserved for network -> 192.168.0.0
+ii) Last one is reserved for broadcast -> 192.168.0.255
+
+In AWS we reserve 5 IPs:
+- First one is reserved for network -> 192.168.0.0
+- second one is reserved for Route -> 192.168.0.1
+- Third one is reserved for DNS -> 192.168.0.2
+- Fourth one is reserved for Future -> 192.168.0.3
+- Last one is reserved for broadcast -> 192.168.0.255
+
+Therefore total number of IPs that can be created are 2^(32-n)-5
+

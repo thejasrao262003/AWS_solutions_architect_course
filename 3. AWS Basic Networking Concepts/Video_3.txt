@@ -1,0 +1,23 @@
+Elastic IP (EIP) – Static Public IP
+    - By default, when you launch an EC2 instance and enable auto-assign public IP:
+        - It gets a dynamic public IP.
+        - If you stop and start the instance, the public IP changes.
+    - You have no control over which public IP is assigned.
+    - To have a static, persistent public IP, you use an Elastic IP (EIP):
+    - An EIP is a static IP address provided by AWS.
+    - You can allocate an EIP and associate it with your EC2 instance.
+    - Even if the instance is stopped and started again, the EIP remains the same.
+    - Only one EIP per running EC2 instance is free; unused or extra EIPs are charged.
+
+NAT Gateway – Outbound Internet Access for Private Subnets
+    - Private EC2 instances in private subnets have:
+        - No direct internet access
+        - No public IP addresses
+    - To allow private instances to access the internet (e.g., for updates, APIs, etc.):
+        - You use a NAT Gateway placed in a public subnet
+        - The NAT Gateway must be associated with an Elastic IP
+        - Route all internet-bound traffic from the private subnet to the NAT Gateway via a route table
+    - The Internet Gateway (IGW) is attached to the public subnet to allow the NAT Gateway itself to access the internet.
+
+Note: NAT Gateway only allows outbound internet access for private instances. It does not allow inbound connections from the internet to the private EC2.
+

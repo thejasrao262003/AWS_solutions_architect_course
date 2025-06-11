@@ -1,0 +1,15 @@
+NACL – Network Access Control List
+    - Acts as a subnet-level firewall
+    - Controls inbound and outbound traffic at the subnet boundary
+    - Stateless – return traffic must be explicitly allowed
+    - Can have both Allow and Deny rules
+    - Rules are evaluated in order, from lowest to highest rule number
+    - Typical use: Block or allow specific IP ranges or ports across the entire subnet
+
+Security Group (SG)
+    - Acts as an instance-level firewall
+    - Controls who can access an EC2 instance and on which ports
+    - Stateful – if you allow inbound traffic, return traffic is automatically allowed
+    - Only allows Allow rules (no deny)
+    - All rules are evaluated together (not by order)
+    - Typical use: Allow SSH (port 22), HTTP (port 80), etc., to specific EC2 instances
