@@ -1,0 +1,8 @@
+AWS Lambda (Serverless computing)
+
+- Run code without wrrying about the server maintenence. Because of this reduced overhead, developers can reclaim time and energy that can be spent on developing great products that scale and are reliable.
+This includes:
+    - Server and OS maintenance
+    - Automatic scaling and Capacity provisioning etc
+example: Refer to lambda.png
+

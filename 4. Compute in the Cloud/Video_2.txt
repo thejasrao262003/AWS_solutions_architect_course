@@ -1,0 +1,21 @@
+AWS EC2 Pricing options
+
+i) On Demand: No commitment -> Costly
+ii) Saving Plans: Commitment -> 1-3 year of commitment (Gives discout)
+    - EC2 saving Plan (Upto 72%)
+        - Change OS
+        - Change Size (same family)
+        - Change tenancy
+    - Compute saving Plan (Upto 66%)
+        - Change family
+        - Change OS
+        - Change tenancy
+         etc
+iii) Spot: Upto 90% discount. Can be used for workload which can withstand interuption. Fault tolerant workload.
+    - Works on bidding system. Bid for a higher price, the current user gets 2 minutes to vacate the system.
+iv) Reserved: (70-66% discount)
+    - Standard: 1 - 3 year commitment. After 6 months, if you feel like you are not using, you can sell the instance to someone else in need.
+        - Only for EC2
+        - No flexibility in changing anything (upto 70%)
+    - Convertible: 
+        - Allows flexibility in changing size, AMI etc

@@ -1,0 +1,39 @@
+What is AWS EC2?
+- EC2 is a web service that provides secure, resizable compute capacity in the cloud
+- Access reliable, scalable infrastructure on demand. Scale capacity within minutes.
+- Provide secure compute for your applications.
+- Optimise performance and cost with flexible options.
+
+EC2 instance launch considerations
+i) Name and Tags: Key Value pair
+ii) Application and OS image: What OS needed? What all prebuilt applications are needed etc
+iii) Instance Type and Size: Based on requirements, what configuration
+    - There are 5 types:
+        - General purpose - Equally emphasises on both compute and memory (t, m)
+        - Storage optimised - Data warehouse kind of application where read, write is very frequent (i)
+        - Compute optimised - High processing, high compute or batch processing workload (c)
+        - Memory optimised - Faster memory retreival tasks (r)
+        - Accelerated Computing - GPU tasks (g)
+
+    Example: C5g.xlarge -> compute optimised, graviton processor, large size system
+iv) Key Pair: To secure our system, go with asymetric key(RSA). There are public and private keys. Use pem file for ssh.
+v) Network and security: Which VPC, which subnet, private/public IP, security group, open ports
+vi) Storage:
+    - EBS: Elastic Block storage:
+        - HDD -> cold HDD, throughput optimised
+        - SSD -> gp1, gp2, IO1, IO2 etc
+vii) Placement and tenancy: Very important:
+    - Tenancy defines how EC2 instances are distributed across physical hardware and it affects pricing.
+        - Shared - Multiple AWS accounts share the same physical hardware
+        - Dedicated Instance (dedicated): Your instance runs on single-tenant hardware
+        - Dedicated Host(host): Your instance runs on a physical server with EC2 intance capacity fully dedicated to your use, an insolated server with configuration that you can control.
+
+Placement Group:
+To meet the needs of your workload, you can launch a group of interdependent EC2 instances into a placement group to influence their placement.
+- Depending on type of workload, you can create a placement group using one of the following:
+    - Cluster: Packs instances close together inside an Availability zone. This strategy enables workloads to achieve low-latency network performance necessary for tightly coupled node-to-node communication.
+    - Partition: Spreads instances across logical partitions such that groups of instances in one partition do not share the underlying hardware with groups of instance in different partitions. Used for large dirtibuted and replicated workloads like Hadoop, Cassandra, Kafka etc
+    - Spread: Strictly places a small group of instances across distinct underlying hardware to reduce correlated failures.
+
+Scripts and Metadata: Gives additional info about my system such as public IP, private IP etc.
+- Script: The commands to be run during instance creation. EX: yum install httpd -y to install apache
