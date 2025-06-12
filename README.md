@@ -11,8 +11,8 @@ This repository tracks my progress, learnings, and reflections across all 14 mod
 |--------|-------|--------|---------|
 | 1 | AWS Global Infrastructure | ✅ | Data centers, AZs, regions, WAF |
 | 2 | Securing AWS Account and Resources | ✅ | IAM (users, groups, roles, policies), AWS Organizations |
-| 3 | AWS Basic Networking Concepts | 🔄 | IP, CIDR, VPC, subnets, routing, NAT, NACL, SG |
-| 4 | Compute in the Cloud | 🔄 | EC2 types, pricing, storage, Lambda |
+| 3 | AWS Basic Networking Concepts | ✅ | IP, CIDR, VPC, subnets, routing, NAT, NACL, SG |
+| 4 | Compute in the Cloud | ✅ | EC2 types, pricing, storage, Lambda |
 | 5 | AWS Storage and Types | 🔄 | Block, object, file storage; S3; data migration |
 | 6 | AWS Database Services and Types | 🔄 | Relational, non-relational, caching, DB migration |
 | 7 | Monitoring and Scaling | 🔄 | Auto Scaling, Load Balancer, CloudWatch, CloudTrail |
