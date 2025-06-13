@@ -1,0 +1,21 @@
+AWS S3 Storage Classes and their Prices
+
+- S3 Standard (Frequent Access of data): 0.023$/GB/month
+Example: When a blockbuster movie releases, put it in S3 Standard Frequent
+- S3 Standard - IA (Infrequent Access): 0.0125$/GB/month
+Example: After 45 days of movie release, when access is not frequent, use this
+- S3 one zone - IA: 0.01$/GB/month
+- S3 Glacier instant retreival: When data should be available in milliseconds (0.004$/GB/month)
+- S3 Glacier Flexible retreival: When data should be available within min-hour -> 0.0036$/GB/month
+- S3 Glacier deep archive (5hrs - 48hrs) -> 0.00099$/GB/month
+- S3 intelligent tiering: Use when you have unknown access pattern
+    - This comes with brain(ML algo). If data is being accessed frequently, pushes it to S3 Standard frequent
+    - If the data is not accessed, then push it to S3 Standard IA
+    - If the data is not being used for 180 days, it pushes to S3 deep archive.
+    - Cost is same as where it is stored + Cost of monitoring (0.0025$/1000 object)
+        - Condition: Object size > 128 KB
+
+Refer to S3_buckets.png and S3_bucket_types.png for more details
+
+- S3 express one zone: This is for single digit milliseconds retreival latency.
+

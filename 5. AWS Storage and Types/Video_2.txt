@@ -1,0 +1,26 @@
+AWS S3 Storage(Object and Bucket Policy)
+
+- Amazon S3 is an object storage(Object is collection of data, meta data and key identifier) service that offers high scalibility, avalibility, security and performance
+- Store and protect any amount of data for data lajes, websites, cloud-native applications, backups etc
+- Amazon S3 is designed for (99.99%) of durability(replicates data in minimum 3 AZ's).
+- Single object cannot be greater than 5TB
+
+AWS S3 Bucket Policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": [
+            "s3:ListBucket",
+            "s3:GetObject",
+        ]
+        "Resource": [
+            "arn:aws:s3::geeks2024",
+            "arn:aws:s3::geeks2024/*",
+        ]
+    ]
+}
+
+File URL: https://{bucket_name}.s3.{region name}.amazonaws.com/{key}
+ 

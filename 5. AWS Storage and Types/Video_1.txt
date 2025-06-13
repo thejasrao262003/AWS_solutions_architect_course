@@ -1,0 +1,9 @@
+AWS Storage types:
+- Block Storage -> EBS
+- Object Storage -> S3
+- File Storage -> EFS
+
+File Storage: I created an EC2 instance in Mumbai(ap-south-1a), then I create an EBS volume in ap-south-2, then use EFS to connect them
+    - EFS Used for linux based system
+    - FSX - windows
+
