@@ -1,4 +1,4 @@
-# 🧠 AWS Solutions Architect Associate — Learning Journal
+# 🧠 AWS Solutions Architect Associate — Learning Journal Log
 
 Welcome to my self-paced journey through the [GFG AWS Solutions Architect Associate course](https://www.geeksforgeeks.org/batch/aws-solutions-architect-associate-self-paced).  
 This repository tracks my progress, learnings, and reflections across all 14 modules as I work towards certification and build a deeper understanding of scalable cloud architecture using AWS.
