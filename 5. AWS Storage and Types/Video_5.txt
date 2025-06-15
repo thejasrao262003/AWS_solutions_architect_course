@@ -1,0 +1,11 @@
+AWS S3 Access Points
+
+- S3 is widely used to store shared datasets, being used by different applications and people for analytics, ML and data lakes.
+- Single Bucket policy for access controls become more complex and difficult to manage as these datasets grow
+- Access points simplify access to these datasets by implementing a unique access policy for each access point
+- This makes it easier for apps and people to have access to same datasets without stepping toes on each other.
+- This also overcomes bucket policy limitation of 20KB.
+- We can create 1000 access points per region
+
+Definition: It simplify data access for any AWS service or customer application that stores data in S3.
+- With S3 Access Points, customers can create unique access control policies for each access point to easily control access to shared datasets.

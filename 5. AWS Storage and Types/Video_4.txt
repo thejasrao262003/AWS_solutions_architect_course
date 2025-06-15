@@ -1,0 +1,21 @@
+AWS S3 Transfer Acceleration and Versioning
+
+AWS S3 Transfer Acceleration
+- Imagine the region that is selected is N.Virginia. So the data is first transfered t Nearest Edge location through Internet
+- Later it is transferred from edge location to the region via the backbone that is connected through every edge location and region
+- This adds additional cost
+
+AWS S3 verioning:
+- Works similar to Git versioning.
+- Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+- You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+- This is also a paid option
+
+AWS S3 Life Cycle:
+- Can define Life cycle policy to decide when data and its versions needs to move to different storage classes
+- We can expire the data, mentioning after few days, I want to delete the data
+
+Note: Whenever there is data larger than 5GB, upload it in multipart. 
+    - From AWS console, we can't upload multipart upload
+    - Can be done only using AWS CLI, AWS SDKs
+

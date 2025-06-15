@@ -1,0 +1,26 @@
+AWS Data Migration(Online and Offline)
+
+Offline Data Migration:
+    - To transfer 1PB of data with 1GBps speed, it takes 100 days.
+    - So to transfer large amounts of data (around PBs of data), AWS gives you hardware(like Hard disk) to you through couriors.
+    - Offline data migration is done via snow family.
+    - There are 3 varieties:
+        - Snowcone: 
+            - 8TB of hard disk
+            - 14 TB of SSD
+        - Snowball edge:
+            - Compute optimised:
+                - 42 TB of data
+            - Storage optimised:
+                - 80 TB of data
+        - Snowmobile:
+            - 100 PB of data.
+
+Online Data Migration:
+    - AWS Storage gateway is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage.
+    - It provides bridge between local applications and remote cloud-based storage
+    - Different types are:
+        - S3 File gateway
+        - FSx file gateway
+        - Tape Gateway
+        - Volume Gateway
