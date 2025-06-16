@@ -1,0 +1,38 @@
+AWS Relational Database(RDS)
+- It is often called as tabled data
+- Data is always stored with fixed schema in the form of rows and columns
+- The different types of SQL commands are:
+    - DDL: create, alter, drop etc
+    - DML: insert, update, delete etc
+    - DQL: select
+    - DCL: grant, revoke etc
+    - TCL: commit, rollback etc
+- The relational database schemas are fixed.
+
+The different relational databases are:
+- Aurora
+- MySQL
+- Postgre
+- MariaDB
+- Oracle
+- Microsoft SQL server
+- IBM DB2
+
+Note: Aurora->  (Cloud database) and it is Amazon propreitary, serverless
+            - Compatible with MySQL, Postgre
+            - 5x faster than MySQL, 3x faster than Postgre
+            - Creates 6 copies in 3 availability Zones
+            - Creates 15 read replica and update in each replicas in 10ms
+
+RDS Multi AZ Deployment:
+    - Deploy database in multiple Availability zones.
+    - So one is for write. The other ones just synchronise data and act as fault tolerant systems
+    - If the primary DB fails, the stand by will change to primary and once the old primary db is up, that is made the new stand by
+
+AWS RDS Read replicas:
+    - Creates multiple read replicas to handle load.
+    - The updates to read replicas happen asynchronously.
+    - That is, there will be a delay for the new data to be shown in the read replicas(within 10ms)
+    - Stale data for few milliseconds
+    - Burstable classes have ability to take more stress
+

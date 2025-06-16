@@ -1,0 +1,6 @@
+AWS Database Services and Types
+
+AWS Database Portfolio(SQL and No SQL)
+
+- Refer to aws_different_databases.png for understanding what are all the database services present and what category of database do they fall into(Relational, Document etc)
+- Our focus is mainly on RDS, DynamoDB
