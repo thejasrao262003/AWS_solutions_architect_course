@@ -1,0 +1,37 @@
+AWS DynamoDB
+
+Features:
+    - No SQL
+    - Key:Value
+    - Serverless database of Amazon
+
+- It is designed to handle 10 trillion requests per day.
+- Use case:
+    - E-commerce application
+    - Creating player profile pages
+    - It can provide single digit(0-9) ms latency
+    - When you create dynamoDB table:
+        - Creating partition/primary key is mandatory
+        - Represented as items -> collection of attributes
+    - In DynamoDB, item size should not be greater than 400kB
+    - If more than 400kB, store in s3 and put link in DynamoDB
+    - Dynamo + cache -> DAX (Dynamo DB accelerator) 0-9 micro seconds latency
+    - RCU -> Read capacity unit
+        - Eventual consistency Read
+        - Strong consistency Read
+    - WCU -> Write capacity unit
+        - For 1 WCU, 1kB of data
+    Note: DynamoDB replicate data across 3 availability zones and takes 1000ms
+        - AZ1, AZ2 and AZ3 are the 3 AZ
+        - For eventual consistency:
+            - Allows you to read from other replicas before write happens to each replica(get stale data)
+            - Here, we don't care about correctness of data for a latency of 1sec
+            Ex: Streaming match
+            - In 0.5 RCU, it can read 4 kB, or 8kB per 1 RCU
+        - For strong consistency: 
+            - Doesn't allow you to read from other AZ until data is replicated throughout all replicas
+            - Ex: Booking systems, financial transactions
+            - They are usually slow. In one RCU, we can read only 4KB of data
+
+    - DynamoDB is good for read purpose:
+    Ex: E-Commerce

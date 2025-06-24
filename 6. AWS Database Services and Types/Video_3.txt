@@ -1,2 +1,14 @@
 AWS Database Caching Strategy
 
+i) Lazy loading: We don't want to fetch frequently accessed data from memory always. So instead, we store it in cache to be able to fetch it easily and quickly
+- Disadvantages:
+    - Each cache will have a TTL. If TTL is 30 mins, the data won't change till 2:30. 
+    - So in case data changes in database, for 30 mins, the change won't be shown.
+    - This will give rise to discrepency
+
+ii) Write through: Changes made in database, will be made in cache as well.
+
+- Eviction strategy:
+    - FIFO
+    - LFU
+    - LRU
